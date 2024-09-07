@@ -1,6 +1,6 @@
 import pandas as pd
 
-def clean(Titanic_dataFrame: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+def clean(Titanic_dataFrame: pd.DataFrame) -> tuple[pd.Series, pd.DataFrame]:
     Titanic_dataFrame = Titanic_dataFrame.drop(['Cabin', 'Ticket', 'Name', 'PassengerId'], axis = 1)
 
     Titanic_dataFrame['Age'] = Titanic_dataFrame['Age'].fillna(Titanic_dataFrame['Age'].mean())
