@@ -1,1 +1,4 @@
-path_dataSet: "../data/Titanic-Dataset.csv"
+path_dataSet_for_train: "../data/Titanic-Dataset.csv"
+path_dataSet_for_test: "../data/tested.csv"
+path_model_Performance_decision_tree_score: "../src/Model_Performance/decision_tree_scores.txt"
+path_model_Performance_decision_tree_plot: "../src/Model_Performance/decision_tree_plot.png"
