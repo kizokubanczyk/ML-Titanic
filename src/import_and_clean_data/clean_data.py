@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-def clean(Titanic_dataFrame_train: pd.DataFrame, Titanic_dataFrame_test: pd.DataFrame) -> [pd.DataFrame, pd.DataFrame, pd.DataFrame ,pd.DataFrame]:
+def clean(Titanic_dataFrame_train: pd.DataFrame, Titanic_dataFrame_test: pd.DataFrame) -> [ pd.Series, pd.DataFrame, pd.Series ,pd.DataFrame]:
      Titanic_dataFrame_test = Titanic_dataFrame_test.drop(['Cabin', 'Ticket', 'Name', 'PassengerId'], axis = 1)
      Titanic_dataFrame_test['Age'] = Titanic_dataFrame_test['Age'].fillna(Titanic_dataFrame_test['Age'].mean())
      Titanic_dataFrame_test['Fare'] = Titanic_dataFrame_test['Fare'].fillna(Titanic_dataFrame_test['Fare'].mean())
@@ -21,10 +21,10 @@ def clean(Titanic_dataFrame_train: pd.DataFrame, Titanic_dataFrame_test: pd.Data
      Titanic_dataFrame_train['Embarked'] = Titanic_dataFrame_train['Embarked'].map(Embarked_map)
 
 
-     df_label_train= Titanic_dataFrame_train[['Survived']]
+     df_label_train= Titanic_dataFrame_train['Survived']
      df_features_train = Titanic_dataFrame_train.drop(['Survived', 'SibSp', 'Parch', 'Embarked'], axis = 1)
 
-     df_label_test = Titanic_dataFrame_test[['Survived']]
+     df_label_test = Titanic_dataFrame_test['Survived']
      df_features_test = Titanic_dataFrame_test.drop(['Survived', 'SibSp', 'Parch', 'Embarked'], axis=1)
 
      return df_label_train, df_features_train, df_label_test, df_features_test

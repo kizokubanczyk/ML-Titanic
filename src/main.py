@@ -1,5 +1,6 @@
 from import_and_clean_data import import_data, clean_data
 from model.classifiers.Decision_Tree import Decision_Tree
+from model.classifiers.Random_forest import Random_forest
 
 import click
 import yaml
@@ -20,6 +21,12 @@ def run(config) -> None:
         decision_Tree.train_model()
         decision_Tree.predict()
         decision_Tree.model_performance()
+        decision_Tree.mis_classified_samples()
+
+        randomForest = Random_forest(label_for_train, df_features_for_train, label_for_test, df_features_for_test)
+        randomForest.train_model()
+        randomForest.predict()
+        randomForest.model_performance()
 
 if __name__ == "__main__":
     run()

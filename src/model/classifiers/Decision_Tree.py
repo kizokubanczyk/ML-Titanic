@@ -6,11 +6,12 @@ from sklearn.metrics import confusion_matrix
 import yaml
 import matplotlib.pyplot as plt
 from sklearn.tree import plot_tree
+from pandas.plotting import table
 
 
 class Decision_Tree:
-    def __init__(self, df_labels_train : pd.Series, df_features_train: pd.DataFrame, df_labels_test : pd.Series, df_features_test: pd.DataFrame):
-        self.__decision_tree = DecisionTreeClassifier()
+    def __init__(self, df_labels_train:  pd.Series, df_features_train: pd.DataFrame, df_labels_test:  pd.Series, df_features_test: pd.DataFrame):
+        self.__decision_tree = DecisionTreeClassifier(random_state=42)
 
         self.__df_labels_train = df_labels_train
         self.__df_features_train = df_features_train
@@ -22,11 +23,9 @@ class Decision_Tree:
 
     def train_model(self) -> None:
 
-        param_grid = {
-            'max_depth': [3],
-            'min_samples_split': [2],
-            'min_samples_leaf': [3]
-        }
+        with open("../config.yaml", 'r') as file:
+            config_data = yaml.safe_load(file)
+            param_grid = config_data.get('decision_tree_parameters')
 
         self.__grid_search = GridSearchCV(estimator=self.__decision_tree, param_grid=param_grid, cv=5, scoring='accuracy')
 
@@ -69,4 +68,26 @@ class Decision_Tree:
 
         else:
             raise ValueError(
-                "No predictions have been made. Please call the 'predict' method before calculating accuracy.")
+                "No predictions have been made. Please call the 'predict' method before calculating performance.")
+
+    def mis_classified_samples(self) -> None:
+
+        results = pd.DataFrame({
+            'Actual': self.__df_labels_test,
+            'Predicted': self.__labels_predict
+        })
+        show_misclassified_samples = results[results['Actual'] != results['Predicted']]
+        mis_classified_indices = show_misclassified_samples.index
+        samples = self.__df_features_test.loc[mis_classified_indices]
+
+        fig, ax = plt.subplots(figsize=(8, 4))
+        ax.xaxis.set_visible(False)
+        ax.yaxis.set_visible(False)
+        ax.set_frame_on(False)
+        table(ax, samples, loc='center', cellLoc='center')
+        with open("../config.yaml", 'r') as file:
+            config_data = yaml.safe_load(file)
+            plt.savefig(config_data.get('path_mis_classified_samples'), bbox_inches='tight', pad_inches=0.05)
+            plt.close()
+
+
