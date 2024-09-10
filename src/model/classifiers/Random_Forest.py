@@ -1,14 +1,13 @@
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report
-import matplotlib.pyplot as plt
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from sklearn.tree import plot_tree
 from sklearn.metrics import confusion_matrix
 import yaml
 import matplotlib.pyplot as plt
 
-class Random_forest:
+class Random_Forest:
     def __init__(self, df_labels_train : pd.Series, df_features_train: pd.DataFrame, df_labels_test : pd.Series, df_features_test: pd.DataFrame):
         self.__RandomForest = RandomForestClassifier(random_state=42)
 

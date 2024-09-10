@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from sklearn.metrics import confusion_matrix
 import yaml
 import matplotlib.pyplot as plt
@@ -85,6 +85,7 @@ class Decision_Tree:
         ax.yaxis.set_visible(False)
         ax.set_frame_on(False)
         table(ax, samples, loc='center', cellLoc='center')
+
         with open("../config.yaml", 'r') as file:
             config_data = yaml.safe_load(file)
             plt.savefig(config_data.get('path_mis_classified_samples'), bbox_inches='tight', pad_inches=0.05)

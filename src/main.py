@@ -1,6 +1,7 @@
 from import_and_clean_data import import_data, clean_data
 from model.classifiers.Decision_Tree import Decision_Tree
-from model.classifiers.Random_forest import Random_forest
+from model.classifiers.Random_Forest import Random_Forest
+from model.classifiers.Support_Vector_Machine import Support_Vector_Machine
 
 import click
 import yaml
@@ -23,10 +24,15 @@ def run(config) -> None:
         decision_Tree.model_performance()
         decision_Tree.mis_classified_samples()
 
-        randomForest = Random_forest(label_for_train, df_features_for_train, label_for_test, df_features_for_test)
+        randomForest = Random_Forest(label_for_train, df_features_for_train, label_for_test, df_features_for_test)
         randomForest.train_model()
         randomForest.predict()
         randomForest.model_performance()
+
+        support_vector_machine = Support_Vector_Machine(label_for_train, df_features_for_train, label_for_test, df_features_for_test)
+        support_vector_machine.train_model()
+        support_vector_machine.predict()
+        support_vector_machine.model_performance()
 
 if __name__ == "__main__":
     run()

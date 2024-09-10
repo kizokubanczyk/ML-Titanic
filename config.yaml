@@ -1,13 +1,15 @@
 path_dataSet_for_train: "../data/Titanic-Dataset.csv"
 path_dataSet_for_test: "../data/tested.csv"
 
-path_model_Performance_decision_tree_score: "../src/Model_Performance/decision_tree/scores/decision_tree_scores.txt"
-path_model_Performance_decision_tree_plot: "../src/Model_Performance/decision_tree/plot/decision_tree_plot.png"
+path_model_Performance_decision_tree_score: "../Model_Performance/decision_tree/scores/decision_tree_scores.txt"
+path_model_Performance_decision_tree_plot: "../Model_Performance/decision_tree/plot/decision_tree_plot.png"
 
-path_model_Performance_random_fores_score: "../src/Model_Performance/random_forest/scores/random_forest_scores.txt"
-path_model_Performance_random_forest_plot: "../src/Model_Performance/random_forest/plot/random_forest_plot"
+path_mis_classified_samples: "../Model_Performance/decision_tree/mis_classified_samples/mis_classified_samples"
 
-path_mis_classified_samples: "../src/Model_Performance/decision_tree/mis_classified_samples/mis_classified_samples"
+path_model_Performance_random_fores_score: "../Model_Performance/random_forest/scores/random_forest_scores.txt"
+path_model_Performance_random_forest_plot: "../Model_Performance/random_forest/plot/random_forest_plot.png"
+
+path_model_support_vector_machine_score: "../Model_Performance/support_vector_machine/scores/support_vector_machine_score.txt"
 
 decision_tree_parameters:
   max_depth: [3]
@@ -20,5 +22,11 @@ random_forest_parameters:
   min_samples_split: [2]
   min_samples_leaf: [5]
   bootstrap: [True, False]
+
+support_vector_machine_parameters:
+  'C': [0.1]
+  'kernel': ['linear']
+  'gamma': [0.01]
+
 
 
