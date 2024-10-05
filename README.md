@@ -40,15 +40,15 @@ To check detailed results, please navigate to the 'scores' folder.
 
 ## Scores
 After these improvements, I was able to achieve the following results:
-### decision tree scores:
-Accuracy score: 0.9808612440191388
-Precision score: 0.9809445809445809
-Recall score: 0.9808612440191388
-F1 score: 0.980805065581185
-Confusion matrix: 
-[[264   2]
- [  6 146]]
 
+### Decision Tree Scores:
+- **Accuracy score:** 0.9808612440191388
+- **Precision score:** 0.9809445809445809
+- **Recall score:** 0.9808612440191388
+- **F1 score:** 0.980805065581185
+
+**Confusion matrix:**
+[[264 2] [ 6 146]]
  
 
 
