@@ -51,7 +51,7 @@ After these improvements, I was able to achieve the following results:
  [[264 2] 
  [ 6 146]]
 
-### Misclassified samples for the decision tree
+### Misclassified samples for the decision tree:
 ![Screenshot](https://github.com/kizokubanczyk/ML-Titanic/blob/main/Model_Performance/decision_tree/mis_classified_samples/mis_classified_samples.png)
 
 ### Random forest scores:
