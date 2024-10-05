@@ -21,3 +21,20 @@ Dataset: https://www.kaggle.com/datasets/yasserh/titanic-dataset/data
 - **Precision:** Measures the accuracy in identifying positive examples, calculated as true positives divided by the total of true positives and false positives.
 - **Recall:** Indicates how well the model identifies all positive samples, computed as true positives divided by the total of true positives and false negatives.
 - **F1 Score**: The harmonic mean of precision and recall, providing a balance between the two metrics, especially in imbalanced datasets.
+
+## Model Ranking Based on Performance
+
+1. Support Vector Machine 
+2. Decision Tree Classifier
+3. RandomF Forest Classifier
+
+To check detailed results, please navigate to the 'scores' folder.
+
+## Decision tree classifier diagram: 
+
+![Screenshot](https://github.com/krystianbrynski/KrystianrBry_ML_Titanic/blob/main/Project_Titanic/scores/Decision_Tree_scores/decision_tree_plot.png)
+
+## Random forest classifier diagrams: 
+
+![Screenshot](https://github.com/krystianbrynski/KrystianrBry_ML_Titanic/blob/main/Project_Titanic/scores/Random_Forest_scores/decision_tree_1.png)
+![Screenshot](https://github.com/krystianbrynski/KrystianrBry_ML_Titanic/blob/main/Project_Titanic/scores/Random_Forest_scores/decision_tree_2.png)
