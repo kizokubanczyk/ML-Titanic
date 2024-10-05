@@ -69,5 +69,7 @@ After these improvements, I was able to achieve the following results:
 [[266   0]
  [  0 152]]
  
+**Confusion matrix:**
 
-
+[264 2]
+[ 6 146]
