@@ -50,6 +50,24 @@ After these improvements, I was able to achieve the following results:
 **Confusion matrix:**
 - [[264 2] 
 - [ 6 146]]
+
+### Random forest scores:
+Accuracy score: 0.9545454545454546
+Precision score: 0.9552239500776255
+Recall score: 0.9545454545454546
+F1 score: 0.9541526173811731
+Confusion matrix: 
+[[262   4]
+ [ 15 137]]
+
+### support vector machine scores:
+Accuracy score: 1.0
+Precision score: 1.0
+Recall score: 1.0
+F1 score: 1.0
+Confusion matrix: 
+[[266   0]
+ [  0 152]]
  
 
 
