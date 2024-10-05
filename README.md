@@ -51,6 +51,9 @@ After these improvements, I was able to achieve the following results:
  [[264 2] 
  [ 6 146]]
 
+### Misclassified samples for the decision tree
+![Screenshot](https://github.com/kizokubanczyk/ML-Titanic/blob/main/Model_Performance/decision_tree/mis_classified_samples/mis_classified_samples.png)
+
 ### Random forest scores:
 - **Accuracy score**: 0.9545454545454546
 - **Precision score**: 0.9552239500776255
@@ -68,4 +71,5 @@ After these improvements, I was able to achieve the following results:
 - **Confusion matrix**: 
 [[266   0]
  [  0 152]]
+
  
