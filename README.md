@@ -38,3 +38,17 @@ To check detailed results, please navigate to the 'scores' folder.
 ![Screenshot](https://github.com/kizokubanczyk/ML-Titanic/blob/main/Model_Performance/random_forest/plot/random_forest_plot.png0.png)
 ![Screenshot](https://github.com/kizokubanczyk/ML-Titanic/blob/main/Model_Performance/random_forest/plot/random_forest_plot.png2.png)
 
+## Scores
+After these improvements, I was able to achieve the following results:
+### decision tree scores:
+Accuracy score: 0.9808612440191388
+Precision score: 0.9809445809445809
+Recall score: 0.9808612440191388
+F1 score: 0.980805065581185
+Confusion matrix: 
+[[264   2]
+ [  6 146]]
+
+ 
+
+
