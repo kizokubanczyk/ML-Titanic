@@ -48,8 +48,8 @@ After these improvements, I was able to achieve the following results:
 - **F1 score:** 0.980805065581185
 
 **Confusion matrix:**
-[[264 2] 
-[ 6 146]]
+- [[264 2] 
+- [ 6 146]]
  
 
 
