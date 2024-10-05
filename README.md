@@ -33,8 +33,8 @@ To check detailed results, please navigate to the 'scores' folder.
 ## Decision tree classifier diagram: 
 
 ![Screenshot](https://github.com/kizokubanczyk/ML-Titanic/blob/main/Model_Performance/decision_tree/plot/decision_tree_plot.png)
-
 ## Random forest classifier diagrams: 
 
-![Screenshot](https://github.com/krystianbrynski/KrystianrBry_ML_Titanic/blob/main/Project_Titanic/scores/Random_Forest_scores/decision_tree_1.png)
-![Screenshot](https://github.com/krystianbrynski/KrystianrBry_ML_Titanic/blob/main/Project_Titanic/scores/Random_Forest_scores/decision_tree_2.png)
+![Screenshot](https://github.com/kizokubanczyk/ML-Titanic/blob/main/Model_Performance/random_forest/plot/random_forest_plot.png0.png)
+![Screenshot](https://github.com/kizokubanczyk/ML-Titanic/blob/main/Model_Performance/random_forest/plot/random_forest_plot.png2.png)
+
