@@ -48,8 +48,8 @@ After these improvements, I was able to achieve the following results:
 - **F1 score:** 0.980805065581185
 
 **Confusion matrix:**
-- [[264 2] 
-- [ 6 146]]
+ [[264 2] 
+ [ 6 146]]
 
 ### Random forest scores:
 - **Accuracy score**: 0.9545454545454546
@@ -69,7 +69,3 @@ After these improvements, I was able to achieve the following results:
 [[266   0]
  [  0 152]]
  
-**Confusion matrix:**
-
-[264 2]
-[ 6 146]
